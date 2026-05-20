@@ -12,7 +12,12 @@ while True:
         break  
     elif user_choice == "start":
         try:
-            var_1 = float(input("Enter a number  "))
+            if memory_answer is not None:
+                var_1 = memory_answer
+                print(f"this is the last answer {var_1}")
+            else:
+                var_1 = float(input("Enter a number  "))
+                
             basic_operator = input("enter any of these operators:+ , - , * , /,^.   ")
             var_2 = float(input("Enter a second number  "))
        
