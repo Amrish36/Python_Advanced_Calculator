@@ -1,20 +1,29 @@
 #This is a basic calculator , make it advanced next time
 memory_answer = None
+VAR_1 = ("Do you want to continue with trhe old calculation {yes / no}  ").lower()
 
 while True:
     print("---new_calculation---")
     if memory_answer is not None:
-        print(f"last calculated answer in memory: {memory_answer}")
+        print(memory_answer)
     user_choice = input("enter start to start calculation or exit to exit: ").lower()
     
     if user_choice == "exit":
         print("goodbye")
         break  
     elif user_choice == "start":
+        if memory_answer is not None:
+            USER_RESPONSE = input(VAR_1).lower()
+            if USER_RESPONSE == "no":
+                memory_answer = None
+                print ("Memory cleared")
+                continue
+            elif USER_RESPONSE == "yes":
+                pass
         try:
             if memory_answer is not None:
                 var_1 = memory_answer
-                print(f"this is the last answer {var_1}")
+                print(var_1)
             else:
                 var_1 = float(input("Enter a number  "))
                 
