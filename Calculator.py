@@ -1,6 +1,6 @@
 #This is a basic calculator , make it advanced next time
 memory_answer = None
-VAR_1 = ("Do you want to continue with trhe old calculation {yes / no}  ").lower()
+VAR_1 = ("Do you want to continue with the old calculation {yes / no}  ").lower()
 
 while True:
     print("---new_calculation---")
