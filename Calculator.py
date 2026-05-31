@@ -1,19 +1,19 @@
 #This is a basic calculator , make it advanced next time
 memory_answer = None
-VAR_1 = ("Do you want to continue with the old calculation {yes / no}  ").lower()
+VAR_1 = ("Do you want to continue with the old calculation {yes / no}  ").strip().lower()
 
 while True:
     print("---new_calculation---")
     if memory_answer is not None:
         print(memory_answer)
-    user_choice = input("enter start to start calculation or exit to exit: ").lower()
+    user_choice = input("enter start to start calculation or exit to exit: ").strip().lower()
     
     if user_choice == "exit":
         print("goodbye")
         break  
     elif user_choice == "start":
         if memory_answer is not None:
-            USER_RESPONSE = input(VAR_1).lower()
+            USER_RESPONSE = input(VAR_1).strip().lower()
             if USER_RESPONSE == "no":
                 memory_answer = None
                 print ("Memory cleared")
